@@ -25,3 +25,18 @@
   console.log(brand);
   response.send("Car Submitted Successfully.")
  })
+
+
+
+ // This is The way  to connect Express  With Mongodb with the help of mongoose
+ //Thats Why We are  Install  Mongoose
+
+ const mongoose = require('mongoose');
+ mongoose.connect('mongodb://localhost:27017/myDatabase', {
+  useNewUrlParser:true,
+  useUnifiedTopology:true
+ })
+ .then(()=>{console.log("Connection Successful")})
+ .catch((error)=>{
+  console.log("Recieved an Error ")
+ })
