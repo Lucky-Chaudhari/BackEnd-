@@ -4,7 +4,7 @@
 // We have the function  to connect the database to backend
 
  const dbConnect = ()=> {
-   mongoose.conncet(process.env.DATABASE_URL,{
+   mongoose.connect(process.env.DATABASE_URL,   {
     useNewUrlParser:true,
     useUnifiedTopology :true
    })
