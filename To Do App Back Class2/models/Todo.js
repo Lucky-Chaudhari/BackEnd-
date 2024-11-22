@@ -1,30 +1,36 @@
+
+// Schema is the discription of your data
+
 const mongoose = require("mongoose");
 
-
-// to create Schema
-
+// Create the Schema for stored the data
 const todoSchema = new mongoose.Schema(
+
   {
-    title:{
+     title:{
       type:String,
       required:true,
       maxLength:50,
-    },
-    description:{
+     },
+     description:{
       type:String,
       required:true,
       maxLength:50,
-    },
-    cratedAt:{
+     },
+
+    //  This is Timestamp
+    createdAt:{
       type:Date,
-       equired:true,
-       default:Date.now()
+      required:true,
+      default:Date.now(),
     },
     updateAt:{
       type:Date,
-       equired:true,
-       default:Date.now()
+      required:true,
+      default:Date.now(),
     }
-  }
+
+}
 );
-module.exports = mongoose.model("Todo",todoSchema);
+//Export the Schema
+module.exports=mongoose.model("Todo",todoSchema);

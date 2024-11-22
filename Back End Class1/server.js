@@ -33,7 +33,7 @@ app.post('/api/cars',(req,res)=>{
   res.send('Car Submitted Successfully.')
 })
 
-// linking  the DB and Express
+// linking or connect the server to DB the DB and Express
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/myDatabase',{
   useNewUrlParser:true,
