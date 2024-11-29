@@ -27,6 +27,6 @@ const dbConnect=require("./config/database");
 dbConnect();
 
 // default Route
-app.get("/",(res,req)=>{
+app.get("/",(req,res)=> {
   res.send(`<h1> This is My Home Page </h1>`)
 })
