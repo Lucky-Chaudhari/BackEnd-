@@ -15,12 +15,12 @@ const postSchema = new mongoose.Schema({
     required:true,
   },
   likes:[{
-    type:mongoose.Schema.Type.ObjectId,
+    type:mongoose.Schema.Types.ObjectId,
     ref:"Like",
     }],
     comments:[{
-      type:mongoose.Schema.Type.ObjectId,
-    ref:"Comment",
+      type:mongoose.Schema.Types.ObjectId,
+      ref:"Comment",
     }]
 })
 

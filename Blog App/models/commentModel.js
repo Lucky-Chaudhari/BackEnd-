@@ -6,9 +6,9 @@ const mongoose = require("mongoose");
 
 
 // route handler
-const commentSchema= new mongoose({
+const commentSchema= new mongoose.Schema({
   post:{
-    type:mongoose.Schema.Type.ObjectId,
+    type:mongoose.Schema.Types.ObjectId,
     ref:"Post",//reference to the post model
   },
   user:{
